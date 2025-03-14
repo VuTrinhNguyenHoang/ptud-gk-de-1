@@ -3,11 +3,35 @@
 {% block content %}
 <div class="container">
     <div class="col-md-8 offset-md-2">
-        <h1 class="my-4">{{ post.title }}</h1>
+        <h1 class="text-center my-4">{{ post.title }}</h1>
         <img src="{{ post.image_url }}" class="img-fluid mb-3" alt="Bài viết">
         <p class="text-muted">Đăng bởi {{ post.author.username }} vào {{ post.created_at.strftime('%d/%m/%Y') }}</p>
         <p>{{ post.content }}</p>
-        <a href="{{ url_for('views.home') }}" class="btn btn-secondary">Quay lại trang chủ</a>
+        
+        <hr>
+        
+        <h3>Bình luận</h3>
+        {% if current_user.is_authenticated %}
+        <form method="POST">
+            <div class="mb-3">
+                <textarea class="form-control" name="content" rows="3" placeholder="Viết bình luận..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+        </form>
+        {% else %}
+        <p><a href="{{ url_for('auth.login') }}">Đăng nhập</a> để bình luận.</p>
+        {% endif %}
+        
+        <hr>
+        
+        {% for comment in comments %}
+        <div class="mb-3">
+            <strong>{{ comment.author.username }}</strong> <span class="text-muted">{{ comment.created_at.strftime('%d/%m/%Y %H:%M') }}</span>
+            <p>{{ comment.content }}</p>
+        </div>
+        {% endfor %}
+        
+        <a href="{{ url_for('views.home') }}" class="btn btn-secondary mt-3">Quay lại trang chủ</a>
     </div>
 </div>
 {% endblock %}
