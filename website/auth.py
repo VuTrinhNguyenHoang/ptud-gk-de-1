@@ -7,6 +7,10 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated == True:
+        flash('Bạn đã đăng nhập', category='warning')
+        return redirect(url_for('views.home'))
+
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -26,6 +30,10 @@ def login():
 
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
+    if current_user.is_authenticated == True:
+        flash('Bạn phải đăng xuất trước', category='warning')
+        return redirect(url_for('views.home'))
+
     if request.method == 'POST':
         username = request.form.get('username').strip()
         email = request.form.get('email').strip()
