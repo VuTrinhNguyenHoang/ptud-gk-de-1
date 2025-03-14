@@ -18,6 +18,7 @@
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">{{ post.content[:150] }}...</p>
                     <a href="{{ url_for('views.view_post', post_id=post.id) }}" class="btn btn-primary">Xem chi tiết</a>
+                    <a href="{{ url_for('views.edit_post', post_id=post.id) }}" class="btn btn-warning">Chỉnh sửa</a>
                 </div>
                 <div class="card-footer text-muted">
                     Đăng vào {{ post.created_at.strftime('%d/%m/%Y') }}

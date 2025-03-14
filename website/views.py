@@ -36,3 +36,20 @@ def create_post():
         return redirect(url_for('views.home'))
     
     return render_template('create_post.html', user=current_user)
+
+@views.route('/edit-post/<int:post_id>', methods=['GET', 'POST'])
+@login_required
+def edit_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    if post.user_id != current_user.id:
+        flash('Bạn không có quyền chỉnh sửa bài viết này.', 'error')
+        return redirect(url_for('views.dashboard'))
+    
+    if request.method == 'POST':
+        post.title = request.form['title']
+        post.content = request.form['content']
+        db.session.commit()
+        flash('Bài viết đã được cập nhật!', 'success')
+        return redirect(url_for('views.dashboard'))
+    
+    return render_template('edit_post.html', user=current_user, post=post)
