@@ -4,6 +4,13 @@
 - **MSSV: 22642231**
 - **STT: 75**
 
+# Mô tả Dự án
+
+Dự án này xây dựng một hệ thống blog đơn giản, cho phép người dùng:
+- **Đăng ký & Đăng nhập:** Tạo tài khoản và đăng nhập để sử dụng hệ thống.
+- **Đăng tải & Quản lý blog:** Viết blog, hỗ trợ hình ảnh.
+- **Dashboard:** Xem các blog của bản thân tại Dashboard.
+
 # Hướng dẫn cài dặt và chạy chương trình
 
 ### Tải hệ thống

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="my-4">{{ post.title }}</h1>
+        <img src="{{ post.image_url }}" class="img-fluid mb-3" alt="Bài viết">
+        <p class="text-muted">Đăng bởi {{ post.author.username }} vào {{ post.created_at.strftime('%d/%m/%Y') }}</p>
+        <p>{{ post.content }}</p>
+        <a href="{{ url_for('views.home') }}" class="btn btn-secondary">Quay lại trang chủ</a>
+    </div>
+</div>
+{% endblock %}
