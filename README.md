@@ -1,76 +1,92 @@
-# Thông tin cá nhân sinh viên
+# 🎓 Thông tin cá nhân sinh viên
 
-- **Trịnh Nguyễn Hoàng Vũ**
-- **MSSV: 22642231**
-- **STT: 75**
+- **👤 Họ và tên:** Trịnh Nguyễn Hoàng Vũ
+- **🆔 MSSV:** 22642231
+- **🔢 STT:** 75
 
-# Mô tả Dự án
+---
 
-Dự án này xây dựng một hệ thống blog đơn giản, cho phép người dùng:
-- **Đăng ký & Đăng nhập:** Tạo tài khoản và đăng nhập để sử dụng hệ thống.
-- **Đăng tải & Quản lý blog:** Viết blog, hỗ trợ hình ảnh.
-- **Dashboard:** Xem các blog của bản thân tại Dashboard.
+# 🚀 Giới thiệu Dự án
 
-# Hướng dẫn cài dặt và chạy chương trình
+Chào mừng bạn đến với **Blog App**, một hệ thống blog đơn giản nhưng mạnh mẽ, giúp bạn dễ dàng chia sẻ những suy nghĩ, bài viết cá nhân. Với hệ thống này, bạn có thể:
 
-### Tải hệ thống
+✅ **Đăng ký & Đăng nhập** – Quản lý tài khoản cá nhân một cách dễ dàng.
 
-Clone dự án từ Github:
+✅ **Viết blog & Quản lý nội dung** – Tạo, chỉnh sửa, xóa bài viết cùng với ảnh minh họa.
+
+✅ **Bảng điều khiển cá nhân (Dashboard)** – Theo dõi và quản lý các bài viết của riêng bạn.
+
+---
+
+# 🛠️ Hướng dẫn cài đặt & chạy ứng dụng
+
+## 📥 Tải về và cài đặt
+
+Trước hết, hãy tải mã nguồn từ GitHub:
 ```bash
 git clone https://github.com/VuTrinhNguyenHoang/ptud-gk-de-1.git
 ```
 
-Vào thư mục hệ thống:
+Di chuyển vào thư mục dự án:
 ```bash
 cd ptud-gk-de-1
 ```
 
-### Cài đặt mô trường ảo
+## 🌍 Thiết lập môi trường
 
-Trước tiên, đảm bảo bạn đã cài đặt Python (phiên bản ≥ 3.10).
+### 1️⃣ Kiểm tra Python
+Hãy đảm bảo rằng bạn đã cài đặt **Python** (phiên bản ≥ 3.10) trước khi tiếp tục.
 
-Tạo môi trường ảo:
+### 2️⃣ Tạo môi trường ảo
+
 ```bash
 python -m venv venv
 ```
 
-Kích hoạt môi trường ảo:
-- Windows: 
+### 3️⃣ Kích hoạt môi trường ảo
+- **Windows:**
     ```bash
     venv\Scripts\activate
     ```
-
-- Ubuntu/Linux:
+- **Ubuntu/Linux:**
     ```bash
     source venv/bin/activate
     ```
 
-### Cài đặt thư viện
+## 📦 Cài đặt thư viện
 
-Cập nhật phiên bản mới nhất của pip trong môi trường ảo:
+Cập nhật `pip` lên phiên bản mới nhất:
 ```bash
 python -m pip install --upgrade pip
 ```
 
-Sau đó, cài đặt các thư viện cần thiết từ `requirements.txt`:
+Sau đó, cài đặt các thư viện cần thiết:
 ```bash
 pip install -r requirements.txt
 ```
 
-### Chạy chương trình
+---
 
-Khởi chạy chương trình:
+# ▶️ Khởi chạy ứng dụng
+
+Sau khi hoàn tất cài đặt, bạn có thể khởi động ứng dụng bằng lệnh sau:
 ```bash
 python main.py
 ```
 
-### Nếu muốn chạy tự động
-
-Chạy file `run.bat`:
+### 🔄 Chạy tự động bằng `run.bat` (dành cho Windows)
+Nếu không muốn gõ lệnh, bạn có thể chạy tập tin batch có sẵn:
 ```bash
 .\run.bat
 ```
 
-# Link project đã triển khai
+---
 
-- [http://127.0.0.1:5000](http://127.0.0.1:5000)
+# 🌐 Truy cập ứng dụng
+
+Sau khi khởi chạy thành công, mở trình duyệt và truy cập:
+
+🔗 **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
+
+Chúc bạn có trải nghiệm tuyệt vời với Blog App! 🚀
+
