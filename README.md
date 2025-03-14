@@ -64,6 +64,13 @@ Khởi chạy chương trình:
 python main.py
 ```
 
+### Nếu muốn chạy tự động
+
+Chạy file `run.bat`:
+```bash
+.\run.bat
+```
+
 # Link project đã triển khai
 
 - [http://127.0.0.1:5000](http://127.0.0.1:5000)
